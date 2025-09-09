@@ -1,0 +1,25 @@
+<table class="user-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Birth Year</th>
+      <th>Birth Place</th>
+      <th>Counter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ user.name }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.birth_year }}</td>
+      <td>{{ user.birth_place }}</td>
+      <td>
+         <label [class.zero]="value===0" [class.positive]="value>0" [class.negative]="value<0">{{value}}</label>
+         <button (click)="increase()">increase</button>
+         <button (click)="decrease()">decrease</button>
+         <button (click)="reset()">reset</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
